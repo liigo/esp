@@ -1,13 +1,13 @@
-ESPÏîÄ¿Ä¿Â¼½éÉÜ
+ï»¿ESPé¡¹ç›®ç›®å½•ä»‹ç»
 by liigo, 2012-6-1
 
-esp-core: ESPºËĞÄ´úÂë¿â (Ô´Âë£¬¾²Ì¬¿â)
+esp-core: ESPæ ¸å¿ƒä»£ç åº“ (æºç ï¼Œé™æ€åº“)
 
-esp-apache, esp-nginx, esp-iis, esp-lighttpd: ¸÷ÖªÃûWEB·şÎñÆ÷µÄESPÄ£¿é/²å¼ş£¨Ô´Âë£¬¶¯Ì¬¿â£©
+esp-apache, esp-nginx, esp-iis, esp-lighttpd: å„çŸ¥åWEBæœåŠ¡å™¨çš„ESPæ¨¡å—/æ’ä»¶ï¼ˆæºç ï¼ŒåŠ¨æ€åº“ï¼‰
 
-esp-e: ESPÒ×ÓïÑÔÖ§³Ö¿â£¨Ô´Âë£¬¶¯Ì¬¿â£©(esp-c? esp-cpp?)
+esp-e: ESPæ˜“è¯­è¨€æ”¯æŒåº“ï¼ˆæºç ï¼ŒåŠ¨æ€åº“ï¼‰(esp-c? esp-cpp?)
 
-esp-lib: ÓÃÓÚ´æ·ÅESP¿â/×é¼ş¿â/Ä£°å¿â¼°ÆäÔ´Âë (lib and src)
+esp-lib: ç”¨äºå­˜æ”¾ESPåº“/ç»„ä»¶åº“/æ¨¡æ¿åº“åŠå…¶æºç  (lib and src)
 
 lib: esp-core.lib etc.
 

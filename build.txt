@@ -1,33 +1,33 @@
-���뷽��
+﻿编译方法
 by liigo, 2012-6-1
 
 
-esp-core   ���� APR, SGI STL
-esp-apache ���� esp-core �� Apache HTTP Server 2.2+
-esp-e      û����������������ֱ�ӱ��롣
+esp-core   依赖 APR, SGI STL
+esp-apache 依赖 esp-core 和 Apache HTTP Server 2.2+
+esp-e      没有其他依赖，可以直接编译。
 
 
-����Apache HTTP ServerԴ���루http://apache.etoak.com//httpd/httpd-2.2.22-win32-src.zip��
-    ��VS�������е�libhttpd, libapr, libaprutil��Ȼ���趨��ص�include��libĿ¼�������ģ�
-    ��������������Google�������������ʾ��Ϣ�����ҵ��������
+下载Apache HTTP Server源代码（http://apache.etoak.com//httpd/httpd-2.2.22-win32-src.zip）
+    用VS编译其中的libhttpd, libapr, libaprutil，然后设定相关的include和lib目录（见下文）
+    如果遇到编译错误，Google搜索编译错误提示信息即可找到解决方法
 
-����SGI STL��http://www.sgi.com/tech/stl/download.html������ѹ���趨includeĿ¼������������includeĿ¼֮ǰ��
+下载SGI STL（http://www.sgi.com/tech/stl/download.html），解压后设定include目录（在所有其他include目录之前）
 
 
-�ڱ���������������includeĿ¼�����¼ٶ�<httpd-src>ΪApache HTTP ServerԴ�����Ŀ¼��
+在编译器中设置以下include目录（以下假定<httpd-src>为Apache HTTP Server源代码根目录）
 <httpd-src>\include
 <httpd-src>\os\win32
 <httpd-src>\srclib\apr\include
 <httpd-src>\srclib\apr-util\include
 
-�ڱ���������������libĿ¼�����ڶ�λlibhttpd.lib, libapr-1.lib, libaprutil-1.lib����
+在编译器中设置以下lib目录（用于定位libhttpd.lib, libapr-1.lib, libaprutil-1.lib）：
 <httpd-src>\Release
 <httpd-src>\srclib\apr\Release
 <httpd-src>\srclib\apr-util\Release
 
-ע�⣺����esp-apache��mod_esp.so��ʱӦ��̬����APR�⣬��ΪApache����������Ҳ�Ƕ�̬����APR�⣬�����һ�����׵��³�ͻ��
-����������WEB������ģ��ʱ��Ӧ��̬����APR�⣬���򷢱�ģ��ʱ��ҪͬʱЯ����Ӧ�Ķ�̬��(libapr-1.dll,libaprutil-1.dll)��
-Ҫ��̬����APR�⣬Ӧ����APR_DECLARE_STATIC�ꡣ
+注意：编译esp-apache（mod_esp.so）时应动态链接APR库，因为Apache服务器本身也是动态链接APR库，如果不一致容易导致冲突。
+而编译其他WEB服务器模块时，应静态链接APR库，否则发表模块时还要同时携带相应的动态库(libapr-1.dll,libaprutil-1.dll)。
+要静态链接APR库，应定义APR_DECLARE_STATIC宏。
 
-ǰ�����Apache HTTP ServerԴ����ʱ�����������APR���Ƕ�̬���ӿ⡣
-���������APR�ľ�̬���ӿ⣬��Ҫ��������APR��Դ���룬��Դ����Ա��뾲̬��(apr)Ҳ���Ա��붯̬��(libapr)��
+前面编译Apache HTTP Server源代码时，编译出来的APR库是动态链接库。
+如果想编译出APR的静态链接库，需要单独下载APR库源代码，该源码可以编译静态库(apr)也可以编译动态库(libapr)。
