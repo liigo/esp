@@ -1,0 +1,7 @@
+<p>本页面主要用与测试页面内的组件池（使用过的组件优先缓存在当前页面的组件池内，以方便下次取用，待页面渲染完毕，统一存入全局组件池。）</p>
+<div esp="type=for from=1 to=1 index=x">
+   <div esp="type=panel name=panel1"><div esp="type=panel name=panel2"/></div>
+   <div esp="type=for"/> <div esp="type=for"/>
+</div>
+<div esp="type=panel name=panel3">panel3</div>
+<div esp="type=for from=1 to=2">#</div>

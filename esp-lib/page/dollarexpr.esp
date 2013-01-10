@@ -1,0 +1,5 @@
+<p>请求文本（Query Sting）: ${?}</p>
+<p>id: ${?id}</p>
+<p>name: ${?name}</p>
+<p>美元表达式的转义：The escape character "!" before Dollar Expressions: </p>
+<p>${x}, !${x}, !!${x}, !!!${x}, !!!!${x}, !!!!!${x}, !!!!!!${x}</p>

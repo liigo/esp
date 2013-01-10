@@ -1,0 +1,10 @@
+; NewLib.def : Declares the module parameters for the DLL.
+
+LIBRARY      "esp_iis"
+DESCRIPTION  'esp extension for iis'
+
+EXPORTS
+	GetExtensionVersion
+	HttpExtensionProc
+	TerminateExtension
+	ESP_GetClientAPI

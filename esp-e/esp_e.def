@@ -1,0 +1,7 @@
+; espmod_fne.def : Declares the module parameters for the DLL.
+
+LIBRARY      "esp_e"
+DESCRIPTION  "ESP client library for eyuyan"
+
+EXPORTS
+    GetNewInf

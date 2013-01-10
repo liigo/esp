@@ -1,0 +1,6 @@
+<p>请猜一个20以内的数值：</p>
+<p esp="type=for from=1 to=20 index=x">
+   <span esp="type=actionlink name=link param=${x}">${x}</span>
+</p>
+<p><a esp="type=actionlink name=newgame">New Game</a></p>
+<div esp:type="guessresult"/>

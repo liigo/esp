@@ -1,0 +1,4 @@
+[liigo][2012-6-7]:
+<div esp="type=for name=for1 from=1 to=10 index=x"> ... </div> 
+上面的写法要比下面的写法简洁许多（节省24个字符输入）：
+<div esp:type="for" esp:name="for1" esp:from="1" esp:to="10" esp:index="x"> ... </div>

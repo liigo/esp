@@ -1,0 +1,11 @@
+<html><body>
+
+<form esp:type="form" esp:name="form1">
+<p><span>My Name: </span>
+<input type="text" name="myname">
+<p><span>Nick Name: </span>
+<input type="text" name="nickname">
+<p><input type="submit">
+</form>
+
+</body></html>
