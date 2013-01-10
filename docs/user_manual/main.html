@@ -58,13 +58,13 @@
 <pre>application/x-esp		esp</pre>
 <p>以上所有配置的作用是，通知Apache服务器加载ESP模块 mod_esp.so，并把针对ESP的请求交给该模块处理。</p>
 <p>ESP 支持 Apache 2.2 及以上版本。</p>
-<p>ESP库文件暂时固定存放于 c:\esp-lib 目录内。</p>
+<p>ESP库文件暂时固定存放于 C:\esplib (Windows) 或 /usr/local/esplib (Linux) 目录内。</p>
 
 <h3>IIS</h3>
 <p>把IIS的ESP扩展DLL文件 esp.dll 复制到任意目录内。</p>
 <p>进入Internet信息服务管理器，在网站“属性-主目录”内，“配置”ISAPI应用程序映射，“添加”以下映射信息：可执行文件为esp.dll（含完整路径），扩展名为.esp，选择“全部动作”，选择“脚本引擎”，不要选择“检查文件是否存在”。</p>
 <p>目前仅在Windows XP + IIS 5.1测试运行过，其他系统和其他IIS版本暂时没有测试。</p>
-<p>ESP库文件暂时固定存放于 c:\esp-lib 目录内，全部需要静态编译。</p>
+<p>ESP库文件暂时固定存放于 C:\esplib 目录内，全部需要静态编译。</p>
 
 <h3>Nginx</h3>
 <p>计划中支持</p>
