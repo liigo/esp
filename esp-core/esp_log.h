@@ -3,7 +3,7 @@
 
 //---------------------------------------------------------
 //#define LOG4C_ENABLE
-#include "..\other\log4c-amalg\log4c_amalgamation.h"
+#include "../other/log4c-amalg/log4c_amalgamation.h"
 
 #if defined(LOG4C_ENABLE) && !defined(ESP_LOG_INIT)
 

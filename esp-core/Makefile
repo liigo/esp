@@ -28,8 +28,8 @@ LINK_FLAGS = -s -O3
 
 ###############################################################################
 ## 变量 (vars)
-INCLUDE_PATHS = -I . -I /usr/local/apr/include/apr-1 
-LIB_PATHS = -L . -L /usr/local/apr/lib/apr-1 
+INCLUDE_PATHS = -I. -I/usr/include/apr-1 
+LIB_PATHS = -L. -L/usr/lib 
 
 # 编译某个源文件 (usage: $(COMPILE) x.cpp)
 COMPILE = $(COMPILER) $(COMPLIE_FLAGS) $(INCLUDE_PATHS) -o $@
